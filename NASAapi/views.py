@@ -18,3 +18,7 @@ def home(request):
     context = {'explanation': explanation, 'url': url, 'title': title}
 
     return render(request, 'home.html', context)
+
+
+def index(request):
+    return render(request, 'index.html')
