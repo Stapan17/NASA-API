@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import django_heroku
 from pathlib import Path
 import os
 
@@ -26,7 +26,7 @@ SECRET_KEY = '8l&23#3-dfko@zzh+egwfizxd&9gv^k8)=i841ri887t8tk58k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nasa-api17.herokuapp.com']
 
 
 # Application definition
@@ -131,3 +131,4 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+django_heroku.settings(locals())
